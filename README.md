@@ -1,2 +1,5 @@
-# Penyemangat
-Raul
+Sistem Informasi Rekam Medis (SIRM) berbasis web ini berhasil dirancang dan dibangun dengan PHP native (PDO) dan MySQL, dengan antarmuka Bootstrap 5. Sistem mencakup seluruh alur pelayanan klinik dari awal sampai akhir: pendaftaran pasien baru dengan No. Rekam Medis otomatis, pendaftaran poli dan antrean, pemeriksaan dokter (keluhan, diagnosa ICD-10, tindakan, catatan, dan resep), penyiapan obat di farmasi, sampai pembayaran dan struk di kasir. Semua modul terhubung lewat satu basis data relasional dengan Foreign Key, sehingga data pasien, kunjungan, rekam medis, resep, dan tagihan saling konsisten.
+
+Dari sisi keamanan dan pengelolaan data, sistem sudah menerapkan hak akses tiga role (Admin, Dokter, Petugas), password ter-hash dengan password_hash, Prepared Statements untuk mencegah SQL Injection, pelindung CSRF dan XSS, serta transaksi database untuk proses penting seperti nomor antrean dan pengurangan stok obat. Perhitungan biaya dilakukan di sisi server, sehingga harga tidak bisa dimanipulasi dari form. Dashboard bergaya modern merangkum antrean, status kunjungan, tren, dan pekerjaan yang tertunda, dan tampilannya menyesuaikan role pengguna.
+
+Dengan demikian, sistem ini dapat mengurangi pencatatan manual, mempercepat pelayanan, meminimalkan kesalahan data, dan memudahkan pencarian riwayat pasien.
